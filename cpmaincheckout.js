@@ -1,4 +1,3 @@
-<script>
 var accordion = (function(){  
   var $accordion = $('.js-accordion');
   var $accordion_header = $accordion.find('.js-accordion-header');
@@ -318,4 +317,4 @@ $(document).ready(function(){
   loadCountries();
   hideLoading();
 });
-</script>
+
