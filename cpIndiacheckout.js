@@ -294,12 +294,12 @@ $("#bill-coupon-apply").click(() => {
 $(document).ready(function(){
   accordion.init({ speed: 0, oneOpen: false });
   cbInstance = window.Chargebee.init({
-  	// site: "chartprime-test",
-    // domain: "https://chartprime-test.chargebee.com/",
-    // publishableKey: "test_NWcuqs5QVpCW8tPhn2EdKrOdF1o7BCXrs",
-    site: "chartprime",
-    domain: "https://chartprime.chargebee.com/",
-    publishableKey: "live_GslYJJq3Mpy9M8Qo3J5rfduG995XPto0",
+  	site: "chartprime-test",
+    domain: "https://chartprime-test.chargebee.com/",
+    publishableKey: "test_NWcuqs5QVpCW8tPhn2EdKrOdF1o7BCXrs",
+    // site: "chartprime",
+    // domain: "https://chartprime.chargebee.com/",
+    // publishableKey: "live_GslYJJq3Mpy9M8Qo3J5rfduG995XPto0",
     enableGATracking: true,
     enableGTMTracking: true,
     enableRefersionTracking: true
