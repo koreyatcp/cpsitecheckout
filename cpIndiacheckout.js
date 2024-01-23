@@ -34,7 +34,7 @@ var couponCode = '';
 var couponCodeURLCODE = 'coupon';
 var currentPlanId = 'vital-algo-monthly';
 // var backend_url = 'https://peaceful-garden-29242.herokuapp.com/api';
-var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com/';
+var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
 			var sURLVariables = sPageURL.split('&');
