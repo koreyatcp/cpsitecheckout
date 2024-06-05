@@ -304,9 +304,9 @@ $("#bill-coupon-apply").click(() => {
 $(document).ready(function(){
   accordion.init({ speed: 0, oneOpen: false });
   cbInstance = window.Chargebee.init({
-    site: "chartprime",
+    site: "chartprime-test",
     domain: "https://chartprime-test.chargebee.com/",
-    publishableKey: "test_SXgjWL2Lyj34ssTMGPrVeZCzW7FCUUSD",
+    publishableKey: "test_gtJo6JjhJYXcNrYcdTciCSYeBBcumiEYVn",
     enableGATracking: true,
     enableGTMTracking: true,
     enableRefersionTracking: true
