@@ -305,8 +305,8 @@ $(document).ready(function(){
   accordion.init({ speed: 0, oneOpen: false });
   cbInstance = window.Chargebee.init({
     site: "chartprime",
-    domain: "https://chartprime.chargebee.com/",
-    publishableKey: "live_GslYJJq3Mpy9M8Qo3J5rfduG995XPto0",
+    domain: "https://chartprime-test.chargebee.com/",
+    publishableKey: "test_BenWGlFhcu7YprCNEgDUXABZa1pU0QIoZ",
     enableGATracking: true,
     enableGTMTracking: true,
     enableRefersionTracking: true
