@@ -32,7 +32,7 @@ var cbInstance;
 var cb_options = {};
 var couponCode = '';
 var couponCodeURLCODE = 'coupon';
-var currentPlanId = 'vital-algo-monthly';
+var currentPlanId = 'chartprime-monthly';
 var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com/api';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
@@ -139,7 +139,7 @@ function resetCheckoutForm() {
 
 // connect subscribe buttons and variables
 $("#activate_month_btn").click(function() {
-	currentPlanId = "vital-algo-monthly";
+	currentPlanId = "chartprime-monthly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$47 Monthly Subscription");
   resetCheckoutForm();
