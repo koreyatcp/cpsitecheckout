@@ -32,7 +32,7 @@ var cbInstance;
 var cb_options = {};
 var couponCode = '';
 var couponCodeURLCODE = 'coupon';
-var currentPlanId = 'chartprime-monthly';
+var currentPlanId = 'vital-algo-monthly';
 var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com/api';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
