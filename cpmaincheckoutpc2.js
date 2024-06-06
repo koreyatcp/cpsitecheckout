@@ -33,7 +33,7 @@ var cb_options = {};
 var couponCode = '';
 var couponCodeURLCODE = 'coupon';
 var currentPlanId = 'vital-algo-monthly';
-var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com/api';
+var backend_url = 'https://chartprime-checkout-temp.herokuapp.com/api';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
 			var sURLVariables = sPageURL.split('&');
@@ -66,7 +66,7 @@ function openChargebee(item_price_id, email) {
   .then((data) => {
   	console.log(data.data);
     if(data.data === "Customer already exists"){
-		if (window.innerWidth < 991) {window.location.href = 'https://chartprime-test.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link');el.click();}
+		if (window.innerWidth < 991) {window.location.href = 'https://chartprime.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link');el.click();}
     }else{
       cbInstance.openCheckout({
       hostedPage: function() {
@@ -146,14 +146,14 @@ $("#activate_month_btn").click(function() {
 });
 
 $("#activate_quarter_btn").click(function() {
-	currentPlanId = "chartprime-quarterly";
+	currentPlanId = "vital-algo-quarterly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$143 Quarterly Subscription");
   resetCheckoutForm();
 });
 
 $("#activate_year_btn").click(function() {
-	currentPlanId = "chartprime-yearly";
+	currentPlanId = "vital-algo-yearly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$489 Yearly Subscription");
   resetCheckoutForm();
