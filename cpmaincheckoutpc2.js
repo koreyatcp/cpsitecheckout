@@ -306,7 +306,7 @@ $(document).ready(function(){
   cbInstance = window.Chargebee.init({
     site: "chartprime-test",
     domain: "https://chartprime-test.chargebee.com/",
-    publishableKey: "test_IzOh1iPcd2QJyAIN6fiMuLxzhjZcdj60by",
+    publishableKey: "test_BenWGlFhcu7YprCNEgDUXABZa1pU0QIoZ",
     enableGATracking: true,
     enableGTMTracking: true,
     enableRefersionTracking: true
