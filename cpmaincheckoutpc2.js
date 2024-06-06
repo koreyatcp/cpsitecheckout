@@ -139,7 +139,7 @@ function resetCheckoutForm() {
 
 // connect subscribe buttons and variables
 $("#activate_month_btn").click(function() {
-	currentPlanId = "chartprime-monthly";
+	currentPlanId = "vital-algo-monthly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$47 Monthly Subscription");
   resetCheckoutForm();
