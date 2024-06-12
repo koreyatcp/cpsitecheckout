@@ -33,7 +33,7 @@ var cb_options = {};
 var couponCode = '';
 var couponCodeURLCODE = 'coupon';
 var currentPlanId = 'vital-algo-monthly';
-var backend_url = 'https://chartprime-checkout-temp.herokuapp.com/api';
+var backend_url = 'https://chartprime-checkout-testing-63c049f5f085.herokuapp.com/api';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
 			var sURLVariables = sPageURL.split('&');
@@ -53,9 +53,9 @@ if(newvar){
 	resecation = newvar;
 }
 console.log('test rsfn',resecation);
-function openChargebee(plan_id, email) {
+function openChargebee(item_price_id, email) {
   return new Promise((resolve, reject) => {
-    $.post(`${backend_url}/generate_checkout_new_url?email=${email}&plan_id=${plan_id}&coupon=${couponCode}&rfsn=${resecation}`, function(data) {
+    $.post(`${backend_url}/generate_checkout_new_url?email=${email}&item_price_id=${item_price_id}&coupon=${couponCode}&rfsn=${resecation}`, function(data) {
       if (data) {
         resolve(data);
       } else {
@@ -66,11 +66,11 @@ function openChargebee(plan_id, email) {
   .then((data) => {
   	console.log(data.data);
     if(data.data === "Customer already exists"){
-		if (window.innerWidth < 991) {window.location.href = 'https://chartprime.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link');el.click();}
+		if (window.innerWidth < 991) {window.location.href = 'https://chartprime-test.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link');el.click();}
     }else{
       cbInstance.openCheckout({
       hostedPage: function() {
-        return $.post(`${backend_url}/generate_checkout_new_url?email=${email}&plan_id=${plan_id}&coupon=${couponCode}&rfsn=${resecation}`);
+        return $.post(`${backend_url}/generate_checkout_new_url?email=${email}&item_price_id=${item_price_id}&coupon=${couponCode}&rfsn=${resecation}`);
       },
       loaded: function() {
         console.log("Checkout opened");
