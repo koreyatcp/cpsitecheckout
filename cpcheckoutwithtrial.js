@@ -146,7 +146,7 @@ $("#activate_month_btn").click(function() {
 });
 
 $("#activate_quarter_btn").click(function() {
-	currentPlanId = "quarterly-with-1-trial";
+	currentPlanId = "vital-algo-quarterly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$143 Quarterly Subscription");
   resetCheckoutForm();
