@@ -153,7 +153,7 @@ $("#activate_quarter_btn").click(function() {
 });
 
 $("#activate_year_btn").click(function() {
-	currentPlanId = "yearly-with-1-trial";
+	currentPlanId = "vital-algo-yearly";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$489 Yearly Subscription");
   resetCheckoutForm();
