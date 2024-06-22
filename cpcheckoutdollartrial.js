@@ -32,7 +32,7 @@ var cbInstance;
 var cb_options = {};
 var couponCode = '';
 var couponCodeURLCODE = 'coupon';
-var currentPlanId = 'chartprime-monthly-1-trial';
+var currentPlanId = 'vital-algo-monthly';
 var backend_url = 'https://chartprime-checkout-temp.herokuapp.com/api';
 function getUrlParameter(sParam) {		
 			var sPageURL = window.location.search.substring(1);
@@ -139,21 +139,21 @@ function resetCheckoutForm() {
 
 // connect subscribe buttons and variables
 $("#activate_month_btn").click(function() {
-	currentPlanId = "chartprime-monthly-1-trial";
+	currentPlanId = "monthly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$47 Monthly Subscription");
   resetCheckoutForm();
 });
 
 $("#activate_quarter_btn").click(function() {
-	currentPlanId = "chartprime-quarterly-1-trial";
+	currentPlanId = "quarterly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$143 Quarterly Subscription");
   resetCheckoutForm();
 });
 
 $("#activate_year_btn").click(function() {
-	currentPlanId = "chartprime-yearly-1-trial";
+	currentPlanId = "yearly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$489 Yearly Subscription");
   resetCheckoutForm();
