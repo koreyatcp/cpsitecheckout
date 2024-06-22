@@ -139,21 +139,21 @@ function resetCheckoutForm() {
 
 // connect subscribe buttons and variables
 $("#activate_month_btn").click(function() {
-	currentPlanId = "vital-algo-monthly";
+	currentPlanId = "monthly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$47 Monthly Subscription");
   resetCheckoutForm();
 });
 
 $("#activate_quarter_btn").click(function() {
-	currentPlanId = "vital-algo-quarterly";
+	currentPlanId = "quarterly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$143 Quarterly Subscription");
   resetCheckoutForm();
 });
 
 $("#activate_year_btn").click(function() {
-	currentPlanId = "vital-algo-yearly";
+	currentPlanId = "yearly-with-1-trial";
   if (typeof getUrlParameter(couponCodeURLCODE) !='undefined'){couponCode = getUrlParameter(couponCodeURLCODE);}
   $("#label-checkout-mode").html("$489 Yearly Subscription");
   resetCheckoutForm();
