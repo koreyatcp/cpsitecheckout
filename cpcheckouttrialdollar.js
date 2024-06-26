@@ -53,6 +53,13 @@ if(newvar){
 	resecation = newvar;
 }
 console.log('test rsfn',resecation);
+function injectCustomScript() {
+  var head = document.head;
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = "https://t.chartprime.com/v1/lst/universal-script?ph=c11f72b0aeeb47211c0e3c318aca81c9cf95cfef32f9be959c7bda83ae257ab5&tag=!clicked&ref_url=" + encodeURI(document.URL);
+  head.appendChild(script);
+}
 function openChargebee(item_price_id, email) {
   return new Promise((resolve, reject) => {
     $.post(`${backend_url}/generate_checkout_new_url?email=${email}&item_price_id=${item_price_id}&coupon=${couponCode}&rfsn=${resecation}`, function(data) {
@@ -74,6 +81,7 @@ function openChargebee(item_price_id, email) {
       },
       loaded: function() {
         console.log("Checkout opened");
+	injectCustomScript();
       },
       error: function(data) {
         $("#loader").hide();
