@@ -66,7 +66,7 @@ function openChargebee(item_price_id, email) {
   .then((data) => {
   	console.log(data.data);
     if(data.data === "Customer already exists"){
-		if (window.innerWidth < 991) {window.location.href = 'https://chartprime-test.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link');el.click();}
+		if (window.innerWidth < 991) {window.location.href = 'https://chartprime-test.chargebee.com/portal/v2/login?forward=home';} else {var el = document.querySelector('.login_link_v2');el.click();}
     }else{
       cbInstance.openCheckout({
       hostedPage: function() {
